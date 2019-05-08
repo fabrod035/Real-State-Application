@@ -1,0 +1,14 @@
+[build]
+  command = "yarn build"
+  functions = "lambda"
+  publish = "build"
+  
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
